@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns = "http://www.springframework.org/schema/beans"
+ 	   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+ 	   xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation = "http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context-3.0.xsd
+       "> 
+   
+   <context:annotation-config />
+   
+   <bean id="play" class="com.Autowire.BeanAutowiring.Player">
+   		<property name="pId" value="1"></property>
+ 		<property name="name" value="FC"></property>
+ 		<property name="pay" value="10000"></property>
+ 		<!-- <constructor-arg value="1" type="int"></constructor-arg>
+ 		<constructor-arg value="rahul" type="String"></constructor-arg>
+		<constructor-arg value="1000" type="float"></constructor-arg> -->
+    </bean>
+   <!-- 
+ <bean id="play" class="com.Autowire.BeanAutowiring.Player" autowire="constructor">
+ <constructor-arg value="1" type="int"></constructor-arg>
+ 		<constructor-arg value="rahul" type="String"></constructor-arg>
+		 <constructor-arg value="1000" type="float"></constructor-arg>
+ </bean>
+ -->
+ 
+ <bean id="club1" class="com.Autowire.BeanAutowiring.Club1"> 		
+ 		<constructor-arg value="1"></constructor-arg>
+ 		<constructor-arg value="FCB"></constructor-arg>
+		 <constructor-arg value="SRK"></constructor-arg>
+		 <!-- 
+ 		<property name="cId" value="1"></property>
+ 		<property name="name" value="FC"></property>
+ 		<property name="owner" value="Barcelona"></property>
+ 		-->
+ </bean>
+</beans>
